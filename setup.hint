@@ -1,0 +1,5 @@
+category: Audio OCaml
+requires: cygwin libogg0 libvorbis0 libvorbisenc2 libvorbisfile3 ocaml ocaml-ogg
+sdesc: "OCaml libvorbis bindings"
+ldesc: "OCaml bindings for libvorbis, libvorbisenc, and libvorbisfile."
+
