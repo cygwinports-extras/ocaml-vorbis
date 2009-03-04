@@ -1,0 +1,23 @@
+--- origsrc/ocaml-vorbis-0.5.0/src/META.in	2009-02-17 12:25:03.000000000 -0600
++++ src/ocaml-vorbis-0.5.0/src/META.in	2009-03-03 14:46:58.742250000 -0600
+@@ -1,6 +1,6 @@
+ name="Vorbis"
+ version="@VERSION@"
+ description="Ocaml bindings to Ogg/Vorbis"
+-requires="unix str"
++requires="ogg unix str"
+ archive(byte) = "vorbis.cma"
+ archive(native) = "vorbis.cmxa"
+--- origsrc/ocaml-vorbis-0.5.0/src/Makefile.in	2009-02-17 12:25:03.000000000 -0600
++++ src/ocaml-vorbis-0.5.0/src/Makefile.in	2009-03-03 14:46:44.179750000 -0600
+@@ -35,8 +35,9 @@ RESULT = vorbis
+ LIBINSTALL_FILES = $(wildcard *.mli *.cmi *.cma *.cmxa *.cmx *.a *.so)
+ LIBS = unix str
+ INCDIRS = @OCAMLOGG_INC@
++LIBDIRS = @OCAMLOGG_INC@
+ ACLIBS = @LIBS@
+-OGG_LIBS = @OGG_LIBS@
++OGG_LIBS = ogg_stubs @OGG_LIBS@
+ VORBIS_LIBS = @VORBIS_LIBS@
+ CLIBS = $(ACLIBS:-l%=%) $(OGG_LIBS:-l%=%) $(VORBIS_LIBS:-l%=%)
+ LDFLAGS = @LDFLAGS@ @OGG_LDFLAGS@ @VORBIS_LDFLAGS@
