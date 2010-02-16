@@ -1,7 +1,7 @@
 inherit ocaml
 
 DESCRIPTION="OCaml bindings for libvorbis"
-HOMEPAGE="http://savonet.sourceforge.net/wiki/OCamlLibs"
+HOMEPAGE="http://savonet.sourceforge.net/"
 SRC_URI="mirror://sourceforge/savonet/${P}.tar.gz"
 
 DIFF_EXCLUDES="examples"
