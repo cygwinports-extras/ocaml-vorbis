@@ -2,7 +2,7 @@ inherit ocaml
 
 NAME="ocaml-vorbis"
 VERSION=0.6.1
-RELEASE=1
+RELEASE=2
 CATEGORY="Libs"
 SUMMARY="OCaml libvorbis bindings"
 DESCRIPTION="OCaml bindings for libvorbis, libvorbisenc, and libvorbisfile."
