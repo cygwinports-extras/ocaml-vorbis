@@ -1,0 +1,19 @@
+inherit ocaml
+
+NAME="ocaml-vorbis"
+VERSION=0.6.1
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="OCaml libvorbis bindings"
+DESCRIPTION="OCaml bindings for libvorbis, libvorbisenc, and libvorbisfile."
+HOMEPAGE="http://savonet.sourceforge.net/"
+SRC_URI="mirror://sourceforge/savonet/${NAME}-${VERSION}.tar.gz"
+
+DIFF_EXCLUDES="examples"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygconf
+	cygmake -j1
+}
